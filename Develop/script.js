@@ -12,12 +12,14 @@ function generatePassword()
   var pwdLength = window.prompt("How many characters would you like your password to contain?");
   console.log(pwdLength);
 
+//This declares that the password length must be between 8 and 128, no more and no less.
   while((pwdLength < 8) || (pwdLength > 128))
   {
     window.alert("Your password needs to be between 8 and 128 characters long.");
     pwdLength = window.prompt("How many characters would you like your password to contain?");
   };
 
+// These prompt questions whether you want these specific cases in your password
   var isupperCase = window.confirm("Do you want upper case letters?");
   console.log(isupperCase);
 
@@ -30,6 +32,7 @@ function generatePassword()
   var isSpecial = window.confirm("Do you want special charcters?");
   console.log(isSpecial);
 
+//This makes sure you chose a question above or won't allow you to move forward
   while (!isupperCase && !islowerCase && !isNumeric && !isSpecial)
   {
     alert("You must choose at least one type of character to continue");
@@ -46,8 +49,9 @@ function generatePassword()
   console.log(isSpecial);
   };
 
+// The password get's put in this string
   var newPassword = ""
-
+// Confirms what your password will include.
   if (isupperCase)
   {
     newPassword += upperCase;    
@@ -74,7 +78,7 @@ function generatePassword()
   };
 
   console.log(newPassword);
-// The character options chosen are taken into consideration and randomly chosen from each variable 
+// The character options chosen are taken into consideration and randomly chosen from each variable
   for (var i = 0; i < pwdLength; i ++) {
     password += newPassword.charAt(Math.floor(Math.random() * newPassword.length))
   }
