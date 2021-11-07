@@ -3,8 +3,6 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numeric = "0123456789"
 var specialChar = "~!@#$%^&*()<>/|\{}'';:?."
 
-//NEEDS MORE COMMENTS
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -76,7 +74,7 @@ function generatePassword()
   };
 
   console.log(newPassword);
-
+// The character options chosen are taken into consideration and randomly chosen from each variable 
   for (var i = 0; i < pwdLength; i ++) {
     password += newPassword.charAt(Math.floor(Math.random() * newPassword.length))
   }
