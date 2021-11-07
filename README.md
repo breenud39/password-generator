@@ -8,7 +8,8 @@ and as you to choose a new number. After that is complete the webpage will promp
 4 different question. These questions will determine the characters used for you password.
 The four choices consist of upper case, lower case, numeric, and special characters. 
 Not choosing any will also result in an error prompting you to re-enter your submission. 
-After successfully completing this task, you will be given a password in the secure password area.
+When all prompts are answered the script uses the information to randomly choose these characters. 
+After successfully completing this task, you will be given a password in the secure password area on the webpage.
 
 ## GitHub Repo:
 
